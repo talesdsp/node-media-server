@@ -1,0 +1,17 @@
+{
+  "name": "node-media-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently -k \"yarn:process-*\"",
+    "process-1": "node -r esm ./app1.js",
+    "process-2": "node -r esm ./app2.js",
+    "process-3": "node -r esm ./app3.js"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "concurrently": "^6.0.0",
+    "node-media-server": "^2.2.4"
+  }
+}
